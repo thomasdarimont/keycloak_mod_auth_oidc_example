@@ -6,6 +6,9 @@ For simplicity reasons we use a plain http configuration instead of setting up h
 More information about the mod_auth_oidc configuration can be found here:
 https://github.com/pingidentity/mod_auth_openidc
 
+A more sophisticated configuration with https / TLS can be found here:
+https://github.com/cyclone-project/cyclone-federation-provider-apache-oidc-demo
+
 ## Define the Keycloak client for the mod_oidc client
  
 Note that the docker host and the Keycloak instance is available via the IP: 172.17.0.1.
