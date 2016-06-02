@@ -61,9 +61,12 @@ ServerName ${HOSTIP}
 ```
 
 ## Build the image
+```
 docker build -t keycloak-mod-oidc .
+```
 
 ## Create the container
+```
 docker run \
        -it \
        --rm \
@@ -74,6 +77,7 @@ docker run \
        -e CLIENT_SECRET=4a932456-6562-42fe-998c-32f7e69f29dc \
        --name keycloak-mod-oidc-demo \
        keycloak-mod-oidc
+```
 
 ## Browse to demo application
 Open http://172.17.0.2/ and click on the link `Access mod_oidc protected page`.
