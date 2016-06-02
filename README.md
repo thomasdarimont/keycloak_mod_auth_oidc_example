@@ -8,11 +8,12 @@ https://github.com/pingidentity/mod_auth_openidc
 
 ## Define the Keycloak client for the mod_oidc client
 
-In my example my docker-Host has the IP: 172.17.0.1,
-my Keycloak instance is also available via that IP address and the port 8081. 
+In the example the docker host has the IP: 172.17.0.1 and the Keycloak instance 
+is also available via that IP address and the port 8081. 
+
 The Docker container has the IP: 172.17.0.2
 
-Clients
+Setup a new client under the "Clients" section of your realm configuration.
 - client_id: mod_oidc_example_client
 - access_type: confidential
 - Valid Redirect Urls
