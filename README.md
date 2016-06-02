@@ -7,9 +7,9 @@ More information about the mod_auth_oidc configuration can be found here:
 https://github.com/pingidentity/mod_auth_openidc
 
 ## Define the Keycloak client for the mod_oidc client
-
-In the example the docker host has the IP: 172.17.0.1 and the Keycloak instance 
-is also available via that IP address and the port 8081. 
+ 
+Note that the docker host and the Keycloak instance is available via the IP: 172.17.0.1.
+Keycloak runs on port 8081. 
 
 The Docker container has the IP: 172.17.0.2
 
