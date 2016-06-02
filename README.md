@@ -1,5 +1,9 @@
 # Keycloak Client with apache and mod_auth_oidc
 
+This example project demonstrates how to configure mod_auth_oidc for use with Keycloak.
+For simplicity reasons we use a plain http configuration instead of setting up https.
+
+More information about the mod_auth_oidc configuration can be found here:
 https://github.com/pingidentity/mod_auth_openidc
 
 ## Define the Keycloak client for the mod_oidc client
@@ -24,7 +28,7 @@ Copy the client secret from the credentials page, e.g.: 4a932456-6562-42fe-998c-
 
 Now you should create a user in your realm.
 
-# mod_auth_oidc Apache module example configuration
+# mod_auth_oidc Apache module configuration
 
 ```
 #LoadModule auth_openidc_module modules/mod_auth_openidc.so
