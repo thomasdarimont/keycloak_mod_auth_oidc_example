@@ -1,6 +1,6 @@
 # Keycloak Client with apache and mod_auth_oidc
 
-This example project demonstrates how to configure mod_auth_oidc for use with Keycloak.
+This example project demonstrates how to configure mod_auth_openidc for use with Keycloak.
 For simplicity reasons we use a plain http configuration instead of setting up https.
 
 More information about the mod_auth_oidc configuration can be found here:
@@ -9,7 +9,7 @@ https://github.com/pingidentity/mod_auth_openidc
 A more sophisticated configuration with https / TLS can be found here:
 https://github.com/cyclone-project/cyclone-federation-provider-apache-oidc-demo
 
-## Define the Keycloak client for the mod_oidc client
+## Define the Keycloak client for the mod_auth_openidc client
  
 Note that the docker host and the Keycloak instance is available via the IP: 172.17.0.1.
 Keycloak runs on port 8081. 
@@ -32,7 +32,7 @@ Copy the client secret from the credentials page, e.g.: 4a932456-6562-42fe-998c-
 
 Now you should create a user in your realm.
 
-# mod_auth_oidc Apache module configuration
+# mod_auth_openidc Apache module configuration
 
 ```
 #LoadModule auth_openidc_module modules/mod_auth_openidc.so
@@ -44,7 +44,7 @@ ServerName ${HOSTIP}
     ServerAdmin webmaster@localhost
     DocumentRoot /var/www/html
 
-    #this is required by mod_oidc
+    #this is required by mod_auth_openidc
     OIDCCryptoPassphrase currently-not-supported-by-keycloak
 
     OIDCProviderMetadataURL ${KEYCLOAK_ADDR}/auth/realms/${KEYCLOAK_REALM}/.well-known/openid-configuration
