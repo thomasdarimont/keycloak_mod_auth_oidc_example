@@ -45,7 +45,7 @@ ServerName ${HOSTIP}
     DocumentRoot /var/www/html
 
     #this is required by mod_auth_openidc
-    OIDCCryptoPassphrase currently-not-supported-by-keycloak
+    OIDCCryptoPassphrase a-random-secret-used-by-apache-oidc-and-balancer
 
     OIDCProviderMetadataURL ${KEYCLOAK_ADDR}/auth/realms/${KEYCLOAK_REALM}/.well-known/openid-configuration
     
